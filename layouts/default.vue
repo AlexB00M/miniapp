@@ -1,0 +1,23 @@
+<script setup>
+useHead({
+    script: [
+        { src: 'https://telegram.org/js/telegram-web-app.js', defer: true }
+    ]
+});
+
+</script>
+
+<template>
+    <div>
+        <main>
+            <ClientOnly>
+                <slot></slot>
+            </ClientOnly>
+        </main>
+    </div>
+</template>
+
+<style lang="css">
+
+
+</style>
