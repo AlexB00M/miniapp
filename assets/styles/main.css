@@ -4,7 +4,7 @@ html, body {
   padding: 0; /* Убираем внутренние отступы */
   height: 100%; /* Устанавливаем высоту на 100% */
   overflow: hidden; /* Отключаем прокрутку для тела */
-  background-color: #262933;
+  background-color: #404555;
 }
 
 * {
@@ -14,19 +14,21 @@ html, body {
 .container {
   font-family: 'Arial', sans-serif;
   color: #ffffff;
-  height: 100vh; /* Контейнер занимает высоту экрана */
-  overflow-y: scroll; /* Принудительно включаем вертикальную прокрутку */
-  -webkit-overflow-scrolling: touch; /* Плавная прокрутка для iOS */
+  background-color: #191A1E;
+  height: 100vh; 
+  width: 100%;
+  overflow-y: scroll; 
+  -webkit-overflow-scrolling: touch; 
   padding: 10px;
-  box-sizing: border-box; /* Учитываем отступы в размерах */
-  position: relative; /* Для создания псевдоэлементов */
+  box-sizing: border-box; 
+  position: relative; 
 }
 
 .container::after {
-  content: ''; /* Пустой контент для создания пространства */
+  content: ''; 
   display: block;
-  height: 22px; /* Высота дополнительного пространства снизу */
-  flex-shrink: 0; /* Предотвращаем сжатие */
+  height: 10px; 
+  flex-shrink: 0; 
 }
 
 h1, h2, p {

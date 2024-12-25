@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devServer: {
-    host: "192.168.1.2",
+    host: "192.168.1.14",
     port: "3000"
   },
   compatibilityDate: "2024-12-20",
@@ -9,7 +9,12 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Playground Mini-App",
-      meta: [{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" }],
+      meta: [
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        }
+      ],
     },
-  },
-})
+  }
+});

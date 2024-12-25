@@ -1,5 +1,5 @@
 <template>
-    <div class="card" :style="{ backgroundColor: color }">
+    <button class="card" :style="{ backgroundColor: color }">
         <div class="card-left">
             <div class="card-top">
                 <span class="product-name">{{ productName }}</span>
@@ -17,10 +17,14 @@
         </div>
         <div class="card-right">
           <button class="settings-button" @click="openModal()">
-            <div class="points"></div>
+            <div class="settings-button">
+                <div class="points"></div>
+                <div class="points"></div>
+                <div class="points"></div> 
+            </div>
           </button>
         </div>
-    </div>
+    </button>
     <Modal :visible="isModalVisible" @close="closeModal">
     </Modal>
 </template>
@@ -51,38 +55,53 @@ const closeModal = () => {
 <style scoped>
 
 .points {
-    width: 100%; 
-    height: 35px; 
-    background-image: radial-gradient(circle, white 3px, transparent 1px);
-    background-size: 100% 33.33%; 
-}
-.settings-button {
-    width: 40px;
-    height: 62px;
-    background-color: black;
-    border: none;
-    cursor: pointer;
-    border-radius: 0px 15px 15px 0px;
+  width: 6px; 
+  height: 6px; 
+  margin: 1px 0; 
+  border-radius: 50%; 
+  background-color: white; 
 }
 
+.settings-button {
+  width: 41px; 
+  height: 55px; 
+  background-color: black;
+  border: none; 
+  border-radius: 0px 14px 14px 0px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 4px; 
+  cursor: pointer; 
+}
+
+
 .card {
+    all: unset;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
     align-items: center;
     background-color: #EF8B00;
     border-radius: 15px;
     margin-bottom: 12px;
     color: #ffffff;
     font-family: Arial, sans-serif;
+    height: auto;
 }
-.card-left{
-    width: 100%;
+
+.card-left {
+    flex-grow: 1;
+    height: 100%; 
+    background-color: transparent; 
     display: flex;
     flex-direction: column;
-    gap: 9px;
-    margin-right: 6px;
-    margin-left: 15px;
+    gap: 4px;
+    padding-right: 6px;
+    padding-left: 15px;
+    align-items: left;
 }
 
 .card-bottom {
